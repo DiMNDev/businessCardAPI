@@ -1,0 +1,92 @@
+html {
+  font-size: 62.5%;
+  background-color: darkslategrey;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-auto-flow: row;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+}
+
+img {
+  width: 90%;
+  aspect-ratio: 1;
+}
+
+.grid-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rebeccapurple; */
+}
+
+.card-wrapper {
+  height: 40rem;
+  width: 30rem;
+  margin: 1rem;
+  perspective: 1000rem;
+}
+
+.card-wrapper:hover .card {
+  transform: rotateY(180deg);
+}
+
+.card {
+  height: 40rem;
+  width: 30rem;
+  transform-style: preserve-3d;
+  /* position: relative; */
+  box-shadow: 0 15px 60px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  transition: all 1s;
+}
+
+.card-front {
+  background-color: rgb(3, 3, 3);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-back {
+  position: absolute;
+  font-size: 1.4rem;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  background-color: #0a0a0a;
+  height: 100%;
+  width: 100%;
+}
+
+.card-front,
+.card-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  border-radius: inherit;
+  transition: transform 0.5s;
+}
+
+.card-front div,
+.card-back div {
+  font-size: 1.5rem;
+  margin: 1rem;
+}
+
+.description {
+  padding: 1rem;
+}
+
+.address {
+  padding: 1rem;
+}
