@@ -46,7 +46,7 @@ const pullData = () => {
     <div class="card-back">
     <h2>${business[i].name}</h2>
     <div class="address">${business[i].address}</div>
-    <div class="description">${descriptions[i][business[i].name]}</div>
+    <div class="description">${business[i].description}</div>
     </div>
   </div>
 </div>
